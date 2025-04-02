@@ -18,4 +18,5 @@ module.exports = [
   require('./scheme/yunbiaokuaipin'),
   require('./scheme/c'),
   require('./scheme/baiyun'),
+  require('./scheme/zrlong.js')
 ]
