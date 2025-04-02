@@ -1,151 +1,187 @@
 module.exports = {
-  "name": "zrlong",
-  "name1": "自然龙",
-  "tableName": "零声母",
-  "row1": [
-    {
-      "alphabet": "U",
-      "yun1": "á",
-      "yun2": "ǎi"
-    },
-    {
-      "alphabet": "I",
-      "yun1": "à",
-      "yun2": "è"
-    },
-    {
-      "alphabet": "R",
-      "yun1": "ē",
-      "yun2": "éi"
-    },
-    {
-      "alphabet": "E",
-      "yun1": "é",
-      "yun2": "ó"
-    },
-    {
-      "alphabet": "T",
-      "yun1": "ì",
-      "yun2": "uá"
-    },
-    {
-      "alphabet": "P",
-      "yun1": "ō",
-      "yun2": "ǎng"
-    },
-    {
-      "alphabet": "O",
-      "yun1": "ài",
-      "yun2": "ǎn"
-    },
-    {
-      "alphabet": "W",
-      "yun1": "áng",
-      "yun2": "ǐng"
-    },
-    {
-      "alphabet": "Q",
-      "yun1": "āo",
-      "yun2": "ēr"
-    },
-    {
-      "alphabet": "Y",
-      "yun1": "ěng",
-      "yun2": "òng"
-    }
+  name: 'zrlong',
+  name1: '自然长码',
+  tableName: '零声母',
+  row1: [
+    { alphabet: 'U', yun1: 'á', yun2: 'ǎi', yun3: 'āng', yun4: 'ěr', yun5: 'iǎng', yun6: 'iáo', yun7: 'uǎng', yun8: 'üē' },
+    { alphabet: 'I', yun1: 'à', yun2: 'è', yun3: 'ǒ', yun4: 'áo', yun5: 'ēi', yun6: 'iáng', yun7: 'üé' },
+    { alphabet: 'R', yun1: 'ē', yun2: 'éi', yun3: 'òu', yun4: 'ùn', yun5: 'iān' },
+    { alphabet: 'E', yun1: 'é', yun2: 'ó', yun3: 'ēn', yun4: 'īng', yun5: 'iàng', yun6: 'iǒng', yun7: 'uàng' },
+    { alphabet: 'T', yun1: 'ì', yun2: 'uá', yun3: 'uī' },
+    { alphabet: 'P', yun1: 'ō', yun2: 'ǎng', yun3: 'iǎn', yun4: 'iōng', yun5: 'uǎi', yun6: 'uò' },
+    { alphabet: 'O', yun1: 'ài', yun2: 'ǎn', yun3: 'ěn', yun4: 'èn', yun5: 'ǔn', yun6: 'iù', yun7: 'uán', yun8: 'üě' },
+    { alphabet: 'W', yun1: 'áng', yun2: 'ǐng', yun3: 'ìng', yun4: 'uāng', yun5: 'uí' },
+    { alphabet: 'Q', yun1: 'āo', yun2: 'ēr', yun3: 'iè' },
+    { alphabet: 'Y', yun1: 'ěng', yun2: 'òng', yun3: 'iāng' },
   ],
-  "row2": [
-    {
-      "alphabet": "L",
-      "yun1": "ā",
-      "yun2": "ě"
-    },
-    {
-      "alphabet": "J",
-      "yun1": "ī",
-      "yun2": "àn"
-    },
-    {
-      "alphabet": "G",
-      "yun1": "ǐ",
-      "yun2": "ò"
-    },
-    {
-      "alphabet": "A",
-      "yun1": "ū",
-      "yun2": "óu"
-    },
-    {
-      "alphabet": "H",
-      "yun1": "ù",
-      "yun2": "ǖ"
-    },
-    {
-      "alphabet": "F",
-      "yun1": "ǜ",
-      "yun2": "èi"
-    },
-    {
-      "alphabet": "D",
-      "yun1": "ái",
-      "yun2": "àng"
-    },
-    {
-      "alphabet": "K",
-      "yun1": "án",
-      "yun2": "ér"
-    },
-    {
-      "alphabet": "S",
-      "yun1": "én",
-      "yun2": "ié"
-    }
+  row2: [
+    { alphabet: 'L', yun1: 'ā', yun2: 'ě', yun3: 'ú', yun4: 'iǎo', yun5: 'iào', yun6: 'uó', yun7: 'uǒ' },
+    { alphabet: 'J', yun1: 'ī', yun2: 'àn', yun3: 'ěi', yun4: 'óng' },
+    { alphabet: 'G', yun1: 'ǐ', yun2: 'ò', yun3: 'ūn', yun4: 'uǎ', yun5: 'uà', yun6: 'uāi' },
+    { alphabet: 'A', yun1: 'ū', yun2: 'óu', yun3: 'iàn' },
+    { alphabet: 'H', yun1: 'ù', yun2: 'ǖ', yun3: 'ǚ', yun4: 'èr', yun5: 'īn' },
+    { alphabet: 'F', yun1: 'ǜ', yun2: 'èi', yun3: 'éng', yun4: 'èng', yun5: 'ún', yun6: 'uài', yun7: 'uì' },
+    { alphabet: 'D', yun1: 'ái', yun2: 'àng', yun3: 'iā', yun4: 'uān', yun5: 'üè' },
+    { alphabet: 'K', yun1: 'án', yun2: 'ér', yun3: 'ōng', yun4: 'iē', yun5: 'ióng' },
+    { alphabet: 'S', yun1: 'én', yun2: 'ié', yun3: 'uā', yun4: 'uái', yun5: 'uǎn', yun6: 'uō' },
   ],
-  "row3": [
-    {
-      "alphabet": "M",
-      "yun1": "ǎ",
-      "yun2": "ǔ"
-    },
-    {
-      "alphabet": "B",
-      "yun1": "í",
-      "yun2": "āi"
-    },
-    {
-      "alphabet": "N",
-      "yun1": "ān",
-      "yun2": "íng"
-    },
-    {
-      "alphabet": "X",
-      "yun1": "ǎo",
-      "yun2": "ǐn"
-    },
-    {
-      "alphabet": "V",
-      "yun1": "ào",
-      "yun2": "ìn"
-    },
-    {
-      "alphabet": "C",
-      "yun1": "ēng",
-      "yun2": "ín"
-    },
-    {
-      "alphabet": "Z",
-      "yun1": "ǒu",
-      "yun2": "iū"
-    }
+  row3: [
+    { alphabet: 'M', yun1: 'ǎ', yun2: 'ǔ', yun3: 'ǘ', yun4: 'iāo', yun5: 'iú' },
+    { alphabet: 'B', yun1: 'í', yun2: 'āi', yun3: 'uáng' },
+    { alphabet: 'N', yun1: 'ān', yun2: 'íng', yun3: 'ǒng', yun4: 'iǎ' },
+    { alphabet: 'X', yun1: 'ǎo', yun2: 'ǐn', yun3: 'ōu', yun4: 'ià' },
+    { alphabet: 'V', yun1: 'ào', yun2: 'ìn', yun3: 'ián', yun4: 'uǐ' },
+    { alphabet: 'C', yun1: 'ēng', yun2: 'ín', yun3: 'iá', yun4: 'iě', yun5: 'uàn' },
+    { alphabet: 'Z', yun1: 'ǒu', yun2: 'iū', yun3: 'iǔ' },
   ],
-  "table1": [],
-  "table2": [],
-  "table3": [],
-  "const": {
-    "name1StartX": 1622
+  table1: [
+    { yun: 'ā', bianma: 'l' },
+    { yun: 'á', bianma: 'u' },
+    { yun: 'ǎi', bianma: 'u' },
+    { yun: 'āng', bianma: 'u' },
+    { yun: 'ǎ', bianma: 'm' },
+    { yun: 'à', bianma: 'i' },
+    { yun: 'áo', bianma: 'i' },
+    { yun: 'àn', bianma: 'j' },
+    { yun: 'āi', bianma: 'b' },
+    { yun: 'ǎng', bianma: 'p' },
+    { yun: 'ái', bianma: 'd' },
+    { yun: 'àng', bianma: 'd' },
+    { yun: 'ài', bianma: 'o' },
+    { yun: 'ǎn', bianma: 'o' },
+    { yun: 'ān', bianma: 'n' },
+    { yun: 'án', bianma: 'k' },
+    { yun: 'áng', bianma: 'w' },
+    { yun: 'āo', bianma: 'q' },
+    { yun: 'ǎo', bianma: 'x' },
+    { yun: 'ào', bianma: 'v' },
+  ],
+  table2: [
+    { yun: 'ě', bianma: 'l' },
+    { yun: 'ěr', bianma: 'u' },
+    { yun: 'è', bianma: 'i' },
+    { yun: 'ēi', bianma: 'i' },
+    { yun: 'ē', bianma: 'r' },
+    { yun: 'éi', bianma: 'r' },
+    { yun: 'é', bianma: 'e' },
+    { yun: 'ēn', bianma: 'e' },
+    { yun: 'ěi', bianma: 'j' },
+    { yun: 'èr', bianma: 'h' },
+    { yun: 'èi', bianma: 'f' },
+    { yun: 'éng', bianma: 'f' },
+    { yun: 'èng', bianma: 'f' },
+    { yun: 'ěn', bianma: 'o' },
+    { yun: 'èn', bianma: 'o' },
+    { yun: 'ér', bianma: 'k' },
+    { yun: 'ēr', bianma: 'q' },
+    { yun: 'én', bianma: 's' },
+    { yun: 'ēng', bianma: 'c' },
+    { yun: 'ěng', bianma: 'y' },
+  ],
+  table3: [
+    { yun: 'ǒ', bianma: 'i' },
+    { yun: 'òu', bianma: 'r' },
+    { yun: 'ó', bianma: 'e' },
+    { yun: 'óng', bianma: 'j' },
+    { yun: 'ò', bianma: 'g' },
+    { yun: 'ō', bianma: 'p' },
+    { yun: 'óu', bianma: 'a' },
+    { yun: 'ǒng', bianma: 'n' },
+    { yun: 'ōng', bianma: 'k' },
+    { yun: 'ōu', bianma: 'x' },
+    { yun: 'òng', bianma: 'y' },
+    { yun: 'ǒu', bianma: 'z' },
+  ],
+  table4: [
+    { yun: 'iǎo', bianma: 'l' },
+    { yun: 'iào', bianma: 'l' },
+    { yun: 'iǎng', bianma: 'u' },
+    { yun: 'iáo', bianma: 'u' },
+    { yun: 'iāo', bianma: 'm' },
+    { yun: 'iú', bianma: 'm' },
+    { yun: 'iáng', bianma: 'i' },
+    { yun: 'iān', bianma: 'r' },
+    { yun: 'īng', bianma: 'e' },
+    { yun: 'iàng', bianma: 'e' },
+    { yun: 'iǒng', bianma: 'e' },
+    { yun: 'ī', bianma: 'j' },
+    { yun: 'í', bianma: 'b' },
+    { yun: 'ǐ', bianma: 'g' },
+    { yun: 'ì', bianma: 't' },
+    { yun: 'iǎn', bianma: 'p' },
+    { yun: 'iōng', bianma: 'p' },
+    { yun: 'iàn', bianma: 'a' },
+    { yun: 'īn', bianma: 'h' },
+    { yun: 'iā', bianma: 'd' },
+    { yun: 'iù', bianma: 'o' },
+    { yun: 'íng', bianma: 'n' },
+    { yun: 'iǎ', bianma: 'n' },
+    { yun: 'iē', bianma: 'k' },
+    { yun: 'ióng', bianma: 'k' },
+    { yun: 'ǐng', bianma: 'w' },
+    { yun: 'ìng', bianma: 'w' },
+    { yun: 'iè', bianma: 'q' },
+    { yun: 'ǐn', bianma: 'x' },
+    { yun: 'ià', bianma: 'x' },
+    { yun: 'ìn', bianma: 'v' },
+    { yun: 'ián', bianma: 'v' },
+    { yun: 'ié', bianma: 's' },
+    { yun: 'ín', bianma: 'c' },
+    { yun: 'iá', bianma: 'c' },
+    { yun: 'iě', bianma: 'c' },
+    { yun: 'iāng', bianma: 'y' },
+    { yun: 'iū', bianma: 'z' },
+    { yun: 'iǔ', bianma: 'z' },
+  ],
+  table5: [
+    { yun: 'ú', bianma: 'l' },
+    { yun: 'uó', bianma: 'l' },
+    { yun: 'uǒ', bianma: 'l' },
+    { yun: 'uǎng', bianma: 'u' },
+    { yun: 'ǔ', bianma: 'm' },
+    { yun: 'ùn', bianma: 'r' },
+    { yun: 'uàng', bianma: 'e' },
+    { yun: 'uáng', bianma: 'b' },
+    { yun: 'ūn', bianma: 'g' },
+    { yun: 'uǎ', bianma: 'g' },
+    { yun: 'uà', bianma: 'g' },
+    { yun: 'uāi', bianma: 'g' },
+    { yun: 'uá', bianma: 't' },
+    { yun: 'uī', bianma: 't' },
+    { yun: 'uǎi', bianma: 'p' },
+    { yun: 'uò', bianma: 'p' },
+    { yun: 'ū', bianma: 'a' },
+    { yun: 'ù', bianma: 'h' },
+    { yun: 'ún', bianma: 'f' },
+    { yun: 'uài', bianma: 'f' },
+    { yun: 'uì', bianma: 'f' },
+    { yun: 'uān', bianma: 'd' },
+    { yun: 'ǔn', bianma: 'o' },
+    { yun: 'uán', bianma: 'o' },
+    { yun: 'uāng', bianma: 'w' },
+    { yun: 'uí', bianma: 'w' },
+    { yun: 'uǐ', bianma: 'v' },
+    { yun: 'uā', bianma: 's' },
+    { yun: 'uái', bianma: 's' },
+    { yun: 'uǎn', bianma: 's' },
+    { yun: 'uō', bianma: 's' },
+    { yun: 'uàn', bianma: 'c' },
+  ],
+  table6: [
+    { yun: 'üē', bianma: 'u' },
+    { yun: 'ǘ', bianma: 'm' },
+    { yun: 'üé', bianma: 'i' },
+    { yun: 'ǖ', bianma: 'h' },
+    { yun: 'ǚ', bianma: 'h' },
+    { yun: 'ǜ', bianma: 'f' },
+    { yun: 'üè', bianma: 'd' },
+    { yun: 'üě', bianma: 'o' },
+  ],
+  const: {
+    name1StartX: 1622,
   },
-  "hant": {
-    "name1": "自然龍",
-    "tableName": "零聲母"
+  hant: {
+    name1: '自然長碼',
+    tableName: '零聲母',
   }
 }

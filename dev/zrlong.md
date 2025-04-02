@@ -1,22 +1,26 @@
 ## Information
 
 1. row
-  - alphabet
-  - sheng：声母可以不变。
-  - yun：对应的韵母。
-2. table 
-  - yun：如何单独打出韵母。
-  - bianma：击键顺序。
-  
+
+- alphabet
+- sheng：声母可以不变。
+- yun：对应的韵母。
+
+2. table
+
+- yun：如何单独打出韵母。
+- bianma：击键顺序。
+
 ## Convert
 
 row 每 8 个为一个 row
 下面的意义何在？
+
 ```js
 { alphabet: ';' },
 ```
 
-以:为间隔，右侧为按键key，左侧为对应韵母yun。
+以:为间隔，右侧为按键 key，左侧为对应韵母 yun。
 key -> alphabet uppercase
 yun -> table/yun 排序
 
@@ -25,6 +29,7 @@ yun：按照首字母放在一个 table
 删去 i 开头，没有这样拼音构成的字。
 
 ## zrlong
+
 ```js
 yun:{
     "ā":"l","á":"u","ǎ":"m","à":"i",
@@ -61,4 +66,42 @@ yun:{
     "uō":"s","uó":"l","uǒ":"l","uò":"p",
     "üē":"u","üé":"i","üě":"o","üè":"d"
 }
+```
+
+## bianma
+
+```
+1: ān án ǎn àn=nkoj
+2: āáǎà=lumi
+3: āi ái ǎi ài=bduo
+4: āng áng ǎng àng=uwpd
+5: āo áo ǎo ào=qixv
+6: ēéěè=reli
+7: ēi éi ěi èi=irjf
+8: ēn én ěn èn=esoo
+9: ēng éng ěng èng=cfyf
+10: ērérěrèr=qkuh
+11: īíǐì=jbgt
+12: iā iá iǎ ià=dcnx
+13: iān ián iǎn iàn=rvpa
+14: iāng iáng iǎng iàng=yiue
+15: iāo iáo iǎo iào=mull
+16: iē ié iě iè=kscq
+17: īn ín ǐn ìn=hcxv
+18: īng íng ǐng ìng=enww
+19: iōng ióng iǒng=pke
+20: iū iú iǔ iù=zmzo
+21: ōóǒò=peig
+22: ōng óng ǒng òng=kjny
+23: ōu óu ǒu òu=xazr
+24: ūúǔù=almh
+25: ǖǘǚǜ=hmsf
+26: uā uá uǎ uà=stgg
+27: uāi uái uǎi uài=gspf
+28: uān uán uǎn uàn=dosc
+29: uāng uáng uǎng uàng=wbue
+30: üē üé üě üè=uiod
+31: uī uí uǐ uì=twvf
+32: ūn ún ǔn ùn=gfor
+33: uō uó uǒ uò=sllp
 ```
