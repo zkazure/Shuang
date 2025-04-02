@@ -98,9 +98,54 @@ def create_rows(inverted_dict):
     
     return row1, row2, row3
 
+def get_tone_index(yun_str):
+    """获取声调的索引，用于排序
+    1: 阴平(ā), 2: 阳平(á), 3: 上声(ǎ), 4: 去声(à)
+    """
+    for char in yun_str:
+        if char in 'āēīōūǖ':
+            return 1
+        elif char in 'áéíóúǘ':
+            return 2
+        elif char in 'ǎěǐǒǔǚ':
+            return 3
+        elif char in 'àèìòùǜ':
+            return 4
+    return 0  # 无声调
+
 def create_tables(inverted_dict, original_mapping):
     """Create tables similar to ziranma.js structure with tone marks preserved"""
-    # Group yuns by first letter (considering tone marks)
+    # 首先按基本韵母和声调整理数据
+    yun_groups = defaultdict(list)
+    
+    # 收集所有韵母并按基本韵母分组
+    for key, values in inverted_dict.items():
+        for yun_str in values:
+            base_yun = remove_tone_marks(yun_str)
+            tone_index = get_tone_index(yun_str)
+            
+            # 获取键盘位置（即原始映射中的值）
+            keyboard_key = original_mapping.get(yun_str).lower()
+            
+            # 生成bianma: 第一个字母 + 键盘位置
+            first_char = remove_tone_marks(yun_str[0])
+            bianma = first_char + keyboard_key
+            
+            # 对于ü，使用v作为输入键
+            if 'ü' in base_yun:
+                bianma = 'v' + keyboard_key
+                
+            yun_groups[base_yun].append({
+                "yun": yun_str,
+                "bianma": bianma,
+                "tone_index": tone_index
+            })
+    
+    # 对每个组内的韵母按声调排序
+    for base_yun, items in yun_groups.items():
+        items.sort(key=lambda x: x["tone_index"])
+    
+    # 按首字母分组到各个表
     a_table = []
     e_table = []
     i_table = []
@@ -108,36 +153,30 @@ def create_tables(inverted_dict, original_mapping):
     u_table = []
     v_table = []  # For 'ü'
     
-    # Process each yun with tone marks
-    for key, values in inverted_dict.items():
-        for yun_str in values:
-            # 创建带有韵母的条目
-            entry = {"yun": yun_str}
+    # 按照基本韵母的首字母分组
+    for base_yun, items in yun_groups.items():
+        first_char = base_yun[0]
+        
+        # 移除不需要的tone_index字段
+        clean_items = []
+        for item in items:
+            clean_items.append({
+                "yun": item["yun"],
+                "bianma": item["bianma"]
+            })
             
-            # 获取韵母的第一个字母（无声调）
-            first_char = remove_tone_marks(yun_str[0])
-            
-            # 获取键盘位置（即原始映射中的值）
-            keyboard_key = original_mapping.get(yun_str).lower()
-            
-            # 生成bianma: 第一个字母 + 键盘位置
-            entry["bianma"] = first_char + keyboard_key
-            
-            # 根据第一个字母确定添加到哪个表格
-            if first_char == 'a':
-                a_table.append(entry)
-            elif first_char == 'e':
-                e_table.append(entry)
-            elif first_char == 'i':
-                i_table.append(entry)
-            elif first_char == 'o':
-                o_table.append(entry)
-            elif first_char == 'u':
-                u_table.append(entry)
-            elif first_char == 'ü' or first_char == 'v':
-                # 处理ü的情况，键盘上通常用v表示
-                entry["bianma"] = 'v' + keyboard_key
-                v_table.append(entry)
+        if first_char == 'a':
+            a_table.extend(clean_items)
+        elif first_char == 'e':
+            e_table.extend(clean_items)
+        elif first_char == 'i':
+            i_table.extend(clean_items)
+        elif first_char == 'o':
+            o_table.extend(clean_items)
+        elif first_char == 'u':
+            u_table.extend(clean_items)
+        elif first_char == 'ü':
+            v_table.extend(clean_items)
     
     return {
         "table1": a_table,
