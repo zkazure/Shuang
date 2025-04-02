@@ -98,7 +98,7 @@ def create_rows(inverted_dict):
     
     return row1, row2, row3
 
-def create_tables(grouped_dict):
+def create_tables(inverted_dict, original_mapping):
     """Create tables similar to ziranma.js structure with tone marks preserved"""
     # Group yuns by first letter (considering tone marks)
     a_table = []
@@ -111,14 +111,19 @@ def create_tables(grouped_dict):
     # Process each yun with tone marks
     for key, values in inverted_dict.items():
         for yun_str in values:
-            # Create entry with the yun and bianma
+            # 创建带有韵母的条目
             entry = {"yun": yun_str}
             
-            # Generate bianma based on the key
-            entry["bianma"] = key.lower()
-            
-            # Determine which table to add to based on first letter
+            # 获取韵母的第一个字母（无声调）
             first_char = remove_tone_marks(yun_str[0])
+            
+            # 获取键盘位置（即原始映射中的值）
+            keyboard_key = original_mapping.get(yun_str).lower()
+            
+            # 生成bianma: 第一个字母 + 键盘位置
+            entry["bianma"] = first_char + keyboard_key
+            
+            # 根据第一个字母确定添加到哪个表格
             if first_char == 'a':
                 a_table.append(entry)
             elif first_char == 'e':
@@ -129,7 +134,9 @@ def create_tables(grouped_dict):
                 o_table.append(entry)
             elif first_char == 'u':
                 u_table.append(entry)
-            elif first_char == 'ü':
+            elif first_char == 'ü' or first_char == 'v':
+                # 处理ü的情况，键盘上通常用v表示
+                entry["bianma"] = 'v' + keyboard_key
                 v_table.append(entry)
     
     return {
@@ -182,7 +189,7 @@ def generate_js_output(rows, tables):
 yun_dict = parse_mapping(yun)
 inverted_dict = invert_mapping(yun_dict)
 row1, row2, row3 = create_rows(inverted_dict)
-tables = create_tables(inverted_dict)
+tables = create_tables(inverted_dict, yun_dict)
 
 # Generate the output in ziranma.js format
 js_output = generate_js_output([row1, row2, row3], tables)
