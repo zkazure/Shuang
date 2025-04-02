@@ -1,6 +1,6 @@
 module.exports = {
   name: "zrlong",
-  name1: "自然长码",
+  name1: "自然龙",
   tableName: "零声母",
   row1: [
     {
@@ -203,7 +203,7 @@ module.exports = {
     name1StartX: 1622,
   },
   hant: {
-    name1: "自然長碼",
+    name1: "自然龍",
     tableName: "零聲母",
   },
 };
