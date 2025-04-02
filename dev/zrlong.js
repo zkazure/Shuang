@@ -1,63 +1,151 @@
 module.exports = {
-  name: 'zrlong',
-  name1: '自然龙',
-  tableName: '零声母',
-  row1: [
-    { alphabet: 'Q', yun1: 'iu' },
-    { alphabet: 'W', yun1: 'ia', yun2: 'ua' },
-    { alphabet: 'E', yun1: 'e' },
-    { alphabet: 'R', yun1: 'uan' },
-    { alphabet: 'T', yun1: 'ue', yun2: 've' },
-    { alphabet: 'Y', yun1: 'ing', yun2: 'uai' },
-    { alphabet: 'U', sheng: 'sh', yun1: 'u' },
-    { alphabet: 'I', sheng: 'ch', yun1: 'i' },
-    { alphabet: 'O', yun1: 'o', yun2: 'uo' },
-    { alphabet: 'P', yun1: 'un' },
+  "name": "zrlong",
+  "name1": "自然龙",
+  "tableName": "零声母",
+  "row1": [
+    {
+      "alphabet": "U",
+      "yun1": "á",
+      "yun2": "ǎi"
+    },
+    {
+      "alphabet": "I",
+      "yun1": "à",
+      "yun2": "è"
+    },
+    {
+      "alphabet": "R",
+      "yun1": "ē",
+      "yun2": "éi"
+    },
+    {
+      "alphabet": "E",
+      "yun1": "é",
+      "yun2": "ó"
+    },
+    {
+      "alphabet": "T",
+      "yun1": "ì",
+      "yun2": "uá"
+    },
+    {
+      "alphabet": "P",
+      "yun1": "ō",
+      "yun2": "ǎng"
+    },
+    {
+      "alphabet": "O",
+      "yun1": "ài",
+      "yun2": "ǎn"
+    },
+    {
+      "alphabet": "W",
+      "yun1": "áng",
+      "yun2": "ǐng"
+    },
+    {
+      "alphabet": "Q",
+      "yun1": "āo",
+      "yun2": "ēr"
+    },
+    {
+      "alphabet": "Y",
+      "yun1": "ěng",
+      "yun2": "òng"
+    }
   ],
-  row2: [
-    { alphabet: 'A', yun1: 'a' },
-    { alphabet: 'S', yun1: 'iong', yun2: 'ong' },
-    { alphabet: 'D', yun1: 'iang', yun2: 'uang' },
-    { alphabet: 'F', yun1: 'en' },
-    { alphabet: 'G', yun1: 'eng' },
-    { alphabet: 'H', yun1: 'ang' },
-    { alphabet: 'J', yun1: 'an' },
-    { alphabet: 'K', yun1: 'ao' },
-    { alphabet: 'L', yun1: 'ai' },
-    { alphabet: ';' },
+  "row2": [
+    {
+      "alphabet": "L",
+      "yun1": "ā",
+      "yun2": "ě"
+    },
+    {
+      "alphabet": "J",
+      "yun1": "ī",
+      "yun2": "àn"
+    },
+    {
+      "alphabet": "G",
+      "yun1": "ǐ",
+      "yun2": "ò"
+    },
+    {
+      "alphabet": "A",
+      "yun1": "ū",
+      "yun2": "óu"
+    },
+    {
+      "alphabet": "H",
+      "yun1": "ù",
+      "yun2": "ǖ"
+    },
+    {
+      "alphabet": "F",
+      "yun1": "ǜ",
+      "yun2": "èi"
+    },
+    {
+      "alphabet": "D",
+      "yun1": "ái",
+      "yun2": "àng"
+    },
+    {
+      "alphabet": "K",
+      "yun1": "án",
+      "yun2": "ér"
+    },
+    {
+      "alphabet": "S",
+      "yun1": "én",
+      "yun2": "ié"
+    }
   ],
-  row3: [
-    { alphabet: 'Z', yun1: 'ei' },
-    { alphabet: 'X', yun1: 'ie' },
-    { alphabet: 'C', yun1: 'iao' },
-    { alphabet: 'V', sheng: 'zh', yun1: 'ui', yun2: 'v' },
-    { alphabet: 'B', yun1: 'ou' },
-    { alphabet: 'N', yun1: 'in' },
-    { alphabet: 'M', yun1: 'ian' },
+  "row3": [
+    {
+      "alphabet": "M",
+      "yun1": "ǎ",
+      "yun2": "ǔ"
+    },
+    {
+      "alphabet": "B",
+      "yun1": "í",
+      "yun2": "āi"
+    },
+    {
+      "alphabet": "N",
+      "yun1": "ān",
+      "yun2": "íng"
+    },
+    {
+      "alphabet": "X",
+      "yun1": "ǎo",
+      "yun2": "ǐn"
+    },
+    {
+      "alphabet": "V",
+      "yun1": "ào",
+      "yun2": "ìn"
+    },
+    {
+      "alphabet": "C",
+      "yun1": "ēng",
+      "yun2": "ín"
+    },
+    {
+      "alphabet": "Z",
+      "yun1": "ǒu",
+      "yun2": "iū"
+    }
   ],
-  table1: [
-    { yun: 'a', bianma: 'aa' },
-    { yun: 'ai', bianma: 'ai' },
-    { yun: 'an', bianma: 'an' },
-    { yun: 'ang', bianma: 'ah' },
-    { yun: 'ao', bianma: 'ao' },
-  ],
-  table2: [
-    { yun: 'e', bianma: 'ee' },
-    { yun: 'ei', bianma: 'ei' },
-    { yun: 'en', bianma: 'en' },
-    { yun: 'eng', bianma: 'eg' },
-    { yun: 'er', bianma: 'er' },
-  ],
-  table3: [
-    { yun: 'o', bianma: 'oo' },
-    { yun: 'ou', bianma: 'ou' },
-  ],
-  const: {
-    name1StartX: 1622,
+  "table1": [],
+  "table2": [],
+  "table3": [],
+  "const": {
+    "name1StartX": 1622
   },
-  hant: {
-    name1: '自然龍',
-    tableName: '零聲母',
+  "hant": {
+    "name1": "自然龍",
+    "tableName": "零聲母"
   }
 }

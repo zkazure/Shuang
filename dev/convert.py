@@ -3,7 +3,7 @@
 import json
 from collections import defaultdict
 
-yun_data = {
+yun = """
     "ā":"l","á":"u","ǎ":"m","à":"i",
     "ē":"r","é":"e","ě":"l","è":"i",
     "ī":"j","í":"b","ǐ":"g","ì":"t",
@@ -37,50 +37,30 @@ yun_data = {
     "uī":"t","uí":"w","uǐ":"v","uì":"f",
     "uō":"s","uó":"l","uǒ":"l","uò":"p",
     "üē":"u","üé":"i","üě":"o","üè":"d"
-}
+"""
 
-# 反向映射成 key->多个 yun 的格式
-reverse_mapping = defaultdict(list)
-for yun, alphabet in yun_data.items():
-    reverse_mapping[alphabet.upper()].append(yun)
+def parse_mapping(mapping_str):
+    mapping_str = mapping_str.replace("\n", "").replace(" ", "")
+    pairs = mapping_str.split(",")
 
-# 构造 rows（自然码布局）
-# 按照键盘顺序
-rows = [
-    ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P'],
-    ['A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', ';'],
-    ['Z', 'X', 'C', 'V', 'B', 'N', 'M']
-]
+    mapping_dict={}
+    for pair in pairs:
+        key, value = pair.replace('"','').split(":")
+        mapping_dict[key] = value
 
-# 组织 rows 数据
-row_data = {}
-for i, row in enumerate(rows, 1):
-    row_data[f'row{i}'] = [
-        {"alphabet": key, "yun1": values[0]} if len(values) == 1 else {"alphabet": key, "yun1": values[0], "yun2": values[1]}
-        for key, values in reverse_mapping.items() if key in row
-    ]
+    return mapping_dict
 
-# 生成 table 数据
-table_data = defaultdict(list)
-for yun, alphabet in yun_data.items():
-    first_letter = yun[0]  # 获取韵母的首字母
-    table_data[first_letter].append({"yun": yun, "bianma": alphabet * 2})  # 假设编码为字母的两次重复
+def invert_mapping(mapping_dict):
+    inverted_dict={}
+    for key, value in mapping_dict.items():
+        value = value.upper()
+        if value not in inverted_dict:
+            inverted_dict[value] = []
+        inverted_dict[value].append(key)
+    return inverted_dict
 
-# 组织最终数据
-ziranma = {
-    "name": "ziranma",
-    "name1": "自然码",
-    "tableName": "零声母",
-    **row_data,
-    "table1": table_data.get('a', []),
-    "table2": table_data.get('e', []),
-    "table3": table_data.get('o', []),
-    "const": {"name1StartX": 1622},
-    "hant": {"name1": "自然碼", "tableName": "零聲母"}
-}
 
-# 转换为 JavaScript 格式
-js_code = "module.exports = " + json.dumps(ziranma, ensure_ascii=False, indent=2)
+yun = parse_mapping(yun)
+yun = invert_mapping(yun)
 
-# 输出 JavaScript 代码
-print(js_code)
+print(yun)
