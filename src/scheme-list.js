@@ -24,6 +24,6 @@ Shuang.resource.schemeList = {
   xiaoyue: '小月双拼**',
   yunbiaokuaipin: '韵标块拼**',
   c: 'C双拼**',
-  baiyun: '白云双拼**'
+  baiyun: '白云双拼**',
   zrlong: '自然龙**'
 }
